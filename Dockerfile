@@ -1,22 +1,20 @@
 # Build stage
-FROM golang:1.20-alpine AS builder
+FROM golang:1.22-alpine AS builder
 
 WORKDIR /app
 
 # Install git for module fetches
 RUN apk add --no-cache git
 
-COPY go.mod go.sum ./
-RUN go mod download
-
 COPY . .
 
+RUN go mod download
 RUN go build -o app .
 
 # Final stage
 FROM alpine:latest
 
-WORKDIR /root/
+WORKDIR /app
 
 COPY --from=builder /app/app .
 
