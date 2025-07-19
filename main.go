@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	targetBase     = "https://example.com"      // Replace with your backend
-	overrideMIME   = "application/octet-stream" // Replace with desired MIME type
+	targetBase     = "https://ios.a.proxy.q3k.onl"      // Replace with your backend
+	overrideMIME   = "application/x-apple-aspen-config" // Replace with desired MIME type
 	listenAddr     = ":8080"
 )
 
