@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -10,9 +9,9 @@ import (
 )
 
 const (
-	targetBase     = "https://ios.a.proxy.q3k.onl"      // Replace with your backend
-	overrideMIME   = "application/x-apple-aspen-config" // Replace with desired MIME type
-	listenAddr     = ":8080"
+	targetBase   = "https://ios.a.proxy.q3k.onl"      // Replace with your backend
+	overrideMIME = "application/x-apple-aspen-config" // Replace with desired MIME type
+	listenAddr   = ":8080"
 )
 
 func main() {
